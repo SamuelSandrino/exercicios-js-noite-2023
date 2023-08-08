@@ -34,23 +34,95 @@
     //  Mostrar o total de números ímpares de pares. 
     //  Faze a média aritimética da soma dos números divisíveis por 3.
 
-    var result = 0;
-    var i = 1;
 
-    for (let n = 0; n <= 1000; n++) {
-        if (n % 2 != 0) {
-            result += n;
-        }
-    }
-    console.log("O resultado da somatória dos números ímpares de 0 a 999 é =", result)
 
-    for (let n = 0; n <= 1000; n++) {
-        if (n % 2 != 0){
-            
-        } 
-        
-            
-        }
-    console.log("A quantidade de números ímpares é =", n);
+    // var result = 0;
+    // var i = 1;
+    // var contador = 0;
+
+    // for (let n = 0; n <= 1000; n++) {
+    //     if (n % 2 != 0) {
+    //         result += n;
+    //         contador = contador + 1;
+    //     }
+    // }
+    // console.log("O resultado da somatória dos números ímpares de 0 a 999 é =", result);
+    // console.log("O total de números ímpares é:", contador);
+    // console.log("A média aritimpética dos números divisíveis por 3 é: ", result / contador);
+
+    // 01 - Escrever um algoritmo que leia 10 números e conte quantos deles estão nos seguintes 
+    // intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade de vezes que aparece cada intervalo.
+
+    // let array = [17, 16, 15, 65, 71, 80, 18, 90, 92, 89, 33]
+
+    // let count1 = 0;
+    // let count2 = 0;
+    // let count3 = 0;
+    // let count4 = 0;
+    // let soma = 0;
+
+
+    // for (let index = 0; index < array.length; index++) {
+    //     if (array [index] <= 25) {
+    //         count1++;
+    //         soma += array [index];
+
+    //     }
+    //     else if (array[index] <= 50) {
+    //         count2++;
+    //     }
+    //     else if (array[index] <= 76) {
+    //         count3++;
+    //     }
+    //     else if (array[index] <= 100) {
+    //         count4++;
+    //     }
+    // }
+
+    //     console.log ("O número de ocorrencias no primeiro intervalo é: ", count1);
+    //     console.log ("O número de ocorrencias no primeiro intervalo é: ", count2);
+    //     console.log ("O número de ocorrencias no primeiro intervalo é: ", count3);
+    //     console.log ("O número de ocorrencias no primeiro intervalo é: ", count4);
+    //     console.log ("A somatória do intervalo 1 é: ", soma);
+
+
+    // 02 - Crie um vetor (array) e um número. Mostre todos os índices onde esse número aparece no vetor, 
+    // e não só apenas o primeiro e/ou último índice em que o número aparece.
+
+
+    // let vetor = [25, 85, 78, 75, 88, 12, 78, 47, 12, 22, 12]
+    // let num = 12;
+
+    // for (let i = 0; i < vetor.length; i++) {
+    //     if (vetor[i] == num) {
+    //         console.log(i);
+    //     }
+    // }
+
+    // 03 - Faça um algoritmo que leia 6 valores positivos. Calcule a quantidade de números pares e ímpares,
+    //  a média de valores pares e a média geral dos números lidos.
+
+        let numbers = [74, 14, 41, 28, 12, 9]
+        let mediapar = 0;
+        let mediageral =0;
+        let quantip = 0;
+        let quantii =0;
+
+
+        for (let i = 0; i < numbers.length; i++) {
+         if (numbers[i] % 2 == 0) {
+            quantip = i}
+         
+        else {
+            quantii = i}
+         }
+         console.log (quantip);
+         console.log (quantii);
+
+
+
+    
+
+
 
 </script>
