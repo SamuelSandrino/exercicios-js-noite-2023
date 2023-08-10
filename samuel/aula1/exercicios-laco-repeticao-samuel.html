@@ -102,27 +102,65 @@
     // 03 - Faça um algoritmo que leia 6 valores positivos. Calcule a quantidade de números pares e ímpares,
     //  a média de valores pares e a média geral dos números lidos.
 
-        let numbers = [74, 14, 41, 28, 12, 9]
-        let mediapar = 0;
-        let mediageral =0;
-        let quantip = 0;
-        let quantii =0;
+    // let numbers = [12, 3, 22, 2, 1, 2]
+    // //             0   1  2   3  4  5
+    // let mediapar = 0;
+    // let mediageral = 0;
+    // let contador1 = 0;
+    // let contador2 = 0;
 
 
-        for (let i = 0; i < numbers.length; i++) {
-         if (numbers[i] % 2 == 0) {
-            quantip = i}
-         
-        else {
-            quantii = i}
-         }
-         console.log (quantip);
-         console.log (quantii);
+    // // for (let i = 0; i < numbers.length ; i++) {
+
+    // //    console.log(numbers[i])
+    // // }
 
 
+    // for (let i = 0; i < numbers.length ; i++) {
+    //     if (numbers[i] % 2 == 0) {
+    //         contador1 += 1;
+    //         mediapar += numbers[i] / contador1;
 
+    //     } else {
+    //         contador2 ++;
+    //     }
+    //     mediageral += numbers[i]/ numbers.length; 
+    // }
+
+    // console.log("A quantidade de números pares é:", contador1);
+    // console.log("A quantidade de números impares é:", contador2);
+    // console.log("Média de números pares= ", mediapar);
+    // console.log ("média geral dos números =", mediageral);
+
+    // 04 - Crie um script que receba 3 números, coloque em um array, depois exiba tal array.
+    //  Modifique os elementos do array de modo a sequência de números ficar do contrário. 
+    //  Ou seja, se digitou: 1,2,3 Vai aparecer: 3,2,1
+
+    // let numbers = [1,2,"sam","dani",5]
+    //     //         0,1,2
+    //     // console.log(numbers.length);
+    // for(let i=numbers.length-1; i>=0; i--){
+    //     console.log(numbers[i]);
+
+    // }
+
+    // 05 - Escreva um script que leia 15 números positivos, encontre o maior deles e o menor deles,
+    //  e mostre na tela. Faça isso na mão, não invoque nenhum método de sorting. Dica pesquisa sobre bubble sort.
+
+    var numbers = [5, 4, 8, 6, 12]
+ 
+        // var bubble_sort_classic = function (array) 
+        // var length = numbers.length;
     
-
-
+        for (var i = 0; i < numbers.length; i++) {
+        for (var j = 0; j < numbers.length - i - 1; j++) {
+            if (matriz[j] > matriz[j + 1]) {
+                array.swap(j, j + 1);
+            }
+        }
+    }
+array de retorno;
+;
+console.log(numbers[i]);
 
 </script>
