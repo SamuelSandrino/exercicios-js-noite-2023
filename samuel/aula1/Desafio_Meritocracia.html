@@ -1,0 +1,103 @@
+<script>
+    // Desafio array
+
+    // Cada unidade tem uma receita base. Essa receita base será nosso comparativo para o caixa atual.
+    // Cada unidade tem "x" pastas; Precisa bater 20 pastas. [array]
+
+    // Se bater 20 pastas, contabiliza tanto pra positivo, quanto pra negativo o valor do caixa.
+    // Se não bater 20 pastas, valor positivo não contabiliza, apenas valor negativo contabiliza.
+
+    // A diferença entre o valor total de caixa atual com o valor total da base MAIS o valor do gerente, precisar ser maior que 20 mil.
+
+    // Se chegar a 20 mil positivo, recebe 800 de meritocracia.
+    // A cada 20 mil, ganha 800 reais.
+    // Menos de 20 mil não recebe meritocracia.
+
+    // Acima de 20 mil, caso não fechar outra merito(exemplo 40 mil), recebe proporcional.
+
+    // Mostrar o valor entre a soma do valor total da base e o valor total atual do caixa.
+    // Mostrar o valor total da meritocracia à receber (caso tenha batido).
+    // Mostrar o valor total do gerente, caso não tenha batido a meritocracia.
+
+
+    let baseGerente = 0;
+    let minimoMerito = 20000;
+    let totalBase = 0;
+    let totalCaixaMes = 0;
+    let resultClinica =0;
+    let resulgerente =0;
+
+    let baseUnidade = [
+        132091.35,
+        107262.59,
+        24422.35,
+        28889.29,
+        148347.45,
+        64635.84,
+        30421.26,
+        15000,
+        22585.53
+    ];
+    let caixaAtual = [
+        139204.36,
+        99152.61,
+        27806.93,
+        35363.27,
+        173191.01,
+        61822.37,
+        28306.43,
+        46928.11,
+        18644.67
+    ];
+    let pastasUnidades = [
+        87,
+        24,
+        47,
+        20,
+        35,
+        15,
+        42,
+        29,
+        29
+    ];
+
+
+    // for (let i = 0; i < baseUnidade.length; i++) {
+    //     totalBase += baseUnidade[i];
+    // }
+    // console.log("O total de bases é: ", totalBase);
+
+
+    // for (let i = 0; i < caixaAtual.length; i++) {
+    //     totalCaixaMes += caixaAtual[i];
+    // }
+    // console.log("O total de caixa do mês é: ", totalCaixaMes);
+
+    // console.log("O resultado geral do caixa do gerete é: ", totalCaixaMes - totalBase);
+
+
+    // for (let i = 0; i < baseUnidade.length; i++) {
+    //    resultClinica = baseUnidade + caixaAtual;
+    //     console.log ("Resultado unidade ",resultClinica)
+
+    // }
+
+    for (let i = 0; i < 8; i++) {
+        if(pastasUnidades[i] >= 20) {
+           resulgerente [i] = caixaAtual[i] - baseUnidade[i];
+        //    i++;
+           console.log ("resultado do gerente: ", resulgerente  );
+           i++;
+        }
+        
+     
+
+
+    }
+
+
+
+
+
+
+</script>
