@@ -24,8 +24,9 @@
     let minimoMerito = 20000;
     let totalBase = 0;
     let totalCaixaMes = 0;
-    let resultClinica =0;
-    let resulgerente =0;
+    let resultClinica = 0;
+    let resulgerente = 0;
+    let valorMerito = 800;
 
     let baseUnidade = [
         132091.35,
@@ -62,38 +63,73 @@
     ];
 
 
-    // for (let i = 0; i < baseUnidade.length; i++) {
-    //     totalBase += baseUnidade[i];
-    // }
-    // console.log("O total de bases é: ", totalBase);
-
-
-    // for (let i = 0; i < caixaAtual.length; i++) {
-    //     totalCaixaMes += caixaAtual[i];
-    // }
-    // console.log("O total de caixa do mês é: ", totalCaixaMes);
-
-    // console.log("O resultado geral do caixa do gerete é: ", totalCaixaMes - totalBase);
-
-
-    // for (let i = 0; i < baseUnidade.length; i++) {
-    //    resultClinica = baseUnidade + caixaAtual;
-    //     console.log ("Resultado unidade ",resultClinica)
-
-    // }
-
-    for (let i = 0; i < 8; i++) {
-        if(pastasUnidades[i] >= 20) {
-           resulgerente [i] = caixaAtual[i] - baseUnidade[i];
-        //    i++;
-           console.log ("resultado do gerente: ", resulgerente  );
-           i++;
+    for (let i = 0; i < baseUnidade.length; i++) {
+        totalBase = caixaAtual[i] - baseUnidade[i];
+        console.log("Os caixas são: ", totalBase);
+        if (totalBase >= 20000 || totalBase < 0 && pastasUnidades >= 20) {
+            resulgerente += totalBase
+            // console.log("O total do caixa do gerente é:", resulgerente);
         }
-        
-     
-
-
+        // console.log("O total do caixa do gerente é:", resulgerente);
     }
+    console.log("O total do caixa do gerente é:", resulgerente);
+    console.log("o valor de mérito é", (resulgerente / minimoMerito) * valorMerito);
+
+
+
+    // let somaBaseAtual = 0;
+    // let somaBaseAnterior = 0;
+    // let merito = 0;
+    // let valorMerito =800;
+    // let meritoGanho =0;
+
+
+    // for (let index =0; index < pastasUnidades.length; index++) {
+    //     somaBaseAnterior = somaBaseAnterior + baseUnidade[index];
+    //     if (pastasUnidades [index] >= 20) {
+    //         somaBaseAtual = somaBaseAtual + baseUnidade[index]
+    //     }
+    //     if (pastasUnidades[index] < 20) {
+    //         if (caixaAtual[index] > baseUnidade[index]) {
+    //             somaBaseAtual = somaBaseAtual + baseUnidade[index]
+    //         }
+    //     }
+    //     if (caixaAtual [index] < baseUnidade[index]) {
+    //         somaBaseAtual = somaBaseAtual + caixaAtual[index]
+    //     }
+    // }
+
+
+    // console.log(somaBaseAnterior);
+    // console.log(somaBaseAtual);
+
+    // merito = somaBaseAtual - somaBaseAnterior + baseGerente;
+    // console.log(merito);
+
+    // if(merito >= minimoMerito) {
+    //     meritoGanho = (merito / minimoMerito) * valorMerito;
+    //     console.log(meritoGanho);
+    // } else {
+    //     console.log("Tente outra vez")
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
