@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Exercicio-DOM-Events-JS</title>
+</head>
+
+<body id="sela">
+    <!-- 
+    1 - Em uma página HTML, utilizando input, insira uma idade e verifique de forma dinâmica se é menor ou maior de idade,
+     se a idade for maior ou igual a 18 anos, deixe o background da tela com a cor black e com o texto informando
+    que a idade é maior de idade com a cor silver, se for menor de idade, deixar o background vermelho com as fonts na cor white. -->
+
+    <h1>Confirme sua Idade</h1>
+    <label>Idade:</label>
+    <input type="number" id="age">
+    <button onclick="verific()">VERIFICADOR</button>
+    <div style="display:none" id="_voltar">
+    </div>
+    <h1 class=isso id="res"> Verifique se você pode entrar</h1>
+</body>
+
+<script>
+
+    function verific() {
+        let idade = Number(document.getElementById("age").value);
+        let resultante = "";
+        if (idade >= 18) {
+            resultante = "VocÊ já é de Maior";
+            document.getElementById("res").innerHTML = "Então meu caro: " + resultante;
+            document.getElementById("sela").style.backgroundColor="black";
+            document.getElementById("res").style.color='silver';
+
+        } else {
+            resultante = "Saia já daqui pirralho!";
+            document.getElementById("sela").style.backgroundColor="red";
+            document.getElementById("res").style.color='white';
+        }
+        document.getElementById("res").innerHTML = "Então meu caro: " + resultante;
+
+    }
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+</html>
