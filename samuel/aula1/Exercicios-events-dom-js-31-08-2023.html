@@ -150,21 +150,57 @@ ação terá cor azul inicialmente. Se o número é divisível por 3, alterar a 
  com o fundo vermelho e a fonte branca, se a média for menor do que sete; A mensagem "Aprovado com Distinção" 
  com o fundo verde e a fonte branca, se a média for igual a dez. -->
 
-<body>
-    <h1 id="titulo">MÉDIA TRIMESTRAL</h1>
-    <label id="point_1">Nota 1:</label>
-    <input type="number" id="x">
+<!-- <body>
+    <h1>MÉDIA TRIMESTRAL</h1>
+    <label>Nota 1:</label>
+    <input type="number" id="point_1">
 
+    <label>Nota 2:</label>
+    <input type="number" id="point_2">
 
-    <label id="point_2">Nota 2:</label>
-    <input type="number" id="x">
-
-
-    <label id="point_3">Nota 3:</label>
-    <input type="number" id="x">
+    <label>Nota 3:</label>
+    <input type="number" id="point_3">
 
     <button type="button" class="btn btn-info" id="bbt" onclick="GeradoraMedia()"> Gerar Média</button>
     <h1 type="text" class="resultudo" id="res"> Aguarde análise...</h1>
+</body>
+
+<script>
+
+    function GeradoraMedia() {
+        var nota1 = parseFloat(document.getElementById("point_1").value);
+        var nota2 = parseFloat(document.getElementById("point_2").value);
+        var nota3 = parseFloat(document.getElementById("point_3").value);
+        var btn = document.getElementById("bbt");
+        var result = 0;
+        result = ((nota1) + (nota2) + (nota3)) / 3;
+
+        if (result == 10) {
+            btn.classList.replace("btn-info", "btn-success");
+            document.getElementById("res").innerHTML = "Aprovado com distinção"
+        } else if (result >= 7 && result < 10) {
+            btn.classList.replace("btn-info", "btn-warning");
+            document.getElementById("res").innerHTML = "Aprovado"
+        } else {
+            btn.classList.replace("btn-info", "btn-danger");
+            document.getElementById("res").innerHTML = "Reprovado"
+
+        }
+    }
+
+</script> -->
+
+<!-- 
+01 - Criar um input, para incluir números a um array, e fazer a ordenação dinamicamente a cada nova inserção de um número. 
+Mostrar na tela os números ordenados (toda vez que adicionar um novo número) -->
+
+<body>
+    <h2>Incluir Valores:</h2>
+    <label id="textnumb">Inserir número:</label>
+    <input type="number" id="x">
+    <button id="add" onclick="CriarArray()"> Adicionar</button>
+    <p id="result"> O array ordenado é: </p>
+
 
 
 </body>
@@ -172,42 +208,26 @@ ação terá cor azul inicialmente. Se o número é divisível por 3, alterar a 
 
 
 
-
-
 <script>
+    var array = []
+    function CriarArray() {
+        var num1 = parseInt(document.getElementById("x").value);
+       var arrayOrdenado = []
+        array.push(num1)
+        arrOrdem = array;
+        // array.sort();
+          
+        array.sort(function(a, b) {
+            return a - b;
+        });
 
-    function GeradoraMedia() {
-        var nota1 = parseInt(document.getElementById("point_1").value);
-        var nota2 = parseInt(document.getElementById("point_2").value);
-        var nota3 = parseInt(document.getElementById("point_3").value);
-        var btn = document.getElementById("resultudo")
-        var result = 0;
-        result = (nota1 + nota2 + nota3) / 3;
-
-
-        if (result == 10) {
-            btn.classList.replace("btn-info", "btn-success");
-            document.getElementById("res").innerHTML="O número é divisível por 3"
-            // btn.innerHTML="O número é divisível por 3"
-
-        } else if {
-            btn.classList.replace("btn-info", "btn-danger");
-            document.getElementById("res").innerHTML = "O número não é divisível por 3"
-
-        } else {
-            btn.classList.replace("btn-info", "btn-danger");
-            document.getElementById("res").innerHTML = "O número não é divisível por 3"
-        }
-
-
-
-
-        }
-
-
+        document.getElementById("result").innerHTML = "O array ordenado é:"+ array;
+        // console.log("final", arrOrdem);
     }
 
+
 </script>
+
 
 
 
