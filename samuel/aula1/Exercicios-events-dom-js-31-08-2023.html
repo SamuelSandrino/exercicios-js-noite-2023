@@ -194,7 +194,7 @@ ação terá cor azul inicialmente. Se o número é divisível por 3, alterar a 
 01 - Criar um input, para incluir números a um array, e fazer a ordenação dinamicamente a cada nova inserção de um número. 
 Mostrar na tela os números ordenados (toda vez que adicionar um novo número) -->
 
-<body>
+<!-- <body>
     <h2>Incluir Valores:</h2>
     <label id="textnumb">Inserir número:</label>
     <input type="number" id="x">
@@ -204,9 +204,6 @@ Mostrar na tela os números ordenados (toda vez que adicionar um novo número) -
 
 
 </body>
-
-
-
 
 <script>
     var array = []
@@ -226,7 +223,130 @@ Mostrar na tela os números ordenados (toda vez que adicionar um novo número) -
     }
 
 
-</script>
+</script> -->
+
+<!-- 02 - Faça um script de uma calculadora IMC, com input de adicionar altura, outro de adicionar o peso,
+ o botão calcular IMC, e mostrar o resultado na tela. -->
+<!-- Calcular IMC IMC = peso / (altura * altura) 
+    menor que 18.5 - abaixo do peso normal 
+    18.5 - 24.9 - peso normal 
+    25 - 29.9 - excesso de peso 
+    30 - 34.9 - obesidade classe I
+    35 - 39.9 - obesidade classe II 
+    maior ou igual a 40 - obesidade classe III -->
+
+
+<!-- <body>
+    <h2> CALCULADORA DE IMC </h2>
+    <label id="peso">Insira seu peso:</label>
+    <input type="number" id="x">
+    <label id="altura">Insira sua altura:</label>
+    <input type="number" id="y">
+
+    <button id="add" onclick="CalcImc()"> Calcular </button>
+    <p id="mensagem"> Você está com: </p>
+
+
+</body>
+
+
+<script>
+    function CalcImc() {
+        let num1 = parseFloat(document.getElementById("x").value);
+        let num2 = parseFloat(document.getElementById("y").value);
+        let result = num1 / (num2 * num2);
+
+        if (result < 18.5) {
+            document.getElementById("mensagem").innerHTML = "Você está: Abaixo do peso normal"
+        }
+        else if (result >= 18.5 && result < 25) {
+            document.getElementById("mensagem").innerHTML = "Você está: Peso normal  "
+        }
+        else if (result >= 25 && result < 30) {
+            document.getElementById("mensagem").innerHTML = "Você está com: Excesso de peso "
+        }
+        else if (result >= 30 && result < 35) {
+            document.getElementById("mensagem").innerHTML = "Você está com: Obesidade classe I"
+        }
+        else if (result >= 35 && result < 40) {
+            document.getElementById("mensagem").innerHTML = "Você está com: Obesidade classe II "
+        }
+        else if (result >= 40) {
+            document.getElementById("mensagem").innerHTML = "Você está com: Obesidade classe III"
+        }
+    }
+</script> -->
+
+<!-- 
+03 - Faça um conversor de temperatura (o usuário pode escolher de Celsius para Fahrenheit, ou vice-versa):
+deverá ter um input para o valor, input tipo radio para escolher para qual escala de temperatura irá converter,
+e o botão, além de mostrar o resultado na tela. "A temperatura em graus X é 0000" -->
+
+<!-- <body>
+    <h2>CONVERSOR DE TEMPERATURA C° X F°</h2>
+    <label>Insira a temperatura:</label>
+    <input type="number" id="temp">
+    <label>C°:</label>
+    <input type="radio" id="x" name="mesmo">
+    <label>F°:</label>
+    <input type="radio" id="y" name="mesmo" checked>
+
+    <button id="convr" onclick="convert()"> CONVERTER </button>
+    <p id="mensagem"> Confira a temperatura: </p>
+</body>
+
+<script>
+    function convert() {
+        var celcio = document.getElementById("x");
+        var fahre = document.getElementById("y");
+        var temp = parseFloat(document.getElementById("temp").value);
+        var result = 0;
+        let texto = "";
+
+        if (fahre.checked) {
+            result = (temp * 1.8) + 32;
+            texto = "A temperatura em Fahrenheit é ";
+        } else {
+            result = (temp - 32) * (5 / 9);
+            texto = "A temperatura em Celsius é ";
+        }
+
+        document.getElementById("mensagem").innerHTML = texto + result;
+    }
+</script> -->
+
+<!-- 04 - Adicione vários números em uma única string, separados com vírgula, em algum evento do JS transforme a string em um array,
+ apresenta o array na tela, e também a soma de todos os valores em suas posições. -->
+
+
+ <h2> SOMA NÚMEROS</h2>
+ <label>Insira números:</label>
+ <input type="number" id="num_">
+ <button id="convr" onclick="criArray()"> FAZER </button>
+ <p id="mensagem"> Confira seu resultado: </p>
+</body>
+
+<script>
+ function criArray([]) {
+     var celcio = document.getElementById("x");
+     var fahre = document.getElementById("y");
+     var temp = parseFloat(document.getElementById("temp").value);
+     var result = 0;
+     let texto = "";
+
+     if (fahre.checked) {
+         result = (temp * 1.8) + 32;
+         texto = "A temperatura em Fahrenheit é ";
+     } else {
+         result = (temp - 32) * (5 / 9);
+         texto = "A temperatura em Celsius é ";
+     }
+
+     document.getElementById("mensagem").innerHTML = texto + result;
+ }
+</script> -->
+
+
 
 
 
