@@ -327,24 +327,17 @@ e o botão, além de mostrar o resultado na tela. "A temperatura em graus X é 0
 </body>
 
 <script>
- function criArray([]) {
-     var celcio = document.getElementById("x");
-     var fahre = document.getElementById("y");
-     var temp = parseFloat(document.getElementById("temp").value);
+ function criArray() {
+     var str = document.getElementById("convr");
+     var array = str.split('');
      var result = 0;
-     let texto = "";
 
-     if (fahre.checked) {
-         result = (temp * 1.8) + 32;
-         texto = "A temperatura em Fahrenheit é ";
-     } else {
-         result = (temp - 32) * (5 / 9);
-         texto = "A temperatura em Celsius é ";
-     }
+     for (let i = 0; i < array.length; i++);
+     result += array[]
 
-     document.getElementById("mensagem").innerHTML = texto + result;
+      document.getElementById("mensagem").innerHTML = texto + result;
  }
-</script> -->
+</script> 
 
 
 
