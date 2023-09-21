@@ -7,7 +7,7 @@ const botao = document.querySelector('#buscar');
 //evento criado para realizar o envio de requisição
 // o (e) é a captura do evento 
 // botao.addEventListener('click', function(e) {
-cep.addEventListener('blur', function(e) {
+cep.addEventListener('blur', function (e) {
 
     //replace função para substiturir um caracter 
     let search = cep.value.replace('-', '');
@@ -34,6 +34,7 @@ cep.addEventListener('blur', function(e) {
                 //se der certo nesse caso retorna os dados p nós 
                 .then(function (data) {
                     console.log(data);
+                    meu_callback(data);
                 })
         })
 
@@ -43,4 +44,31 @@ cep.addEventListener('blur', function(e) {
         })
 
     //console.log(search);
+
+    function limpa_formulário_cep() {
+        //Limpa valores do formulário de cep.
+        document.getElementById('rua').value = ("");
+        document.getElementById('bairro').value = ("");
+        document.getElementById('cidade').value = ("");
+        document.getElementById('uf').value = ("");
+    
+    }
+    
+    function meu_callback(conteudo) {
+        if (!("Error" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('rua').value = (conteudo.logradouro);
+            document.getElementById('bairro').value = (conteudo.bairro);
+            document.getElementById('cidade').value = (conteudo.localidade);
+            document.getElementById('uf').value = (conteudo.uf);
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+    
+
 })
+
